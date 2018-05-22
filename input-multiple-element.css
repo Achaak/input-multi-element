@@ -1,7 +1,7 @@
 .fw-input-multiple-element {
     position: relative;
     padding: 0 7px 7px 7px;
-    width: 20%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
