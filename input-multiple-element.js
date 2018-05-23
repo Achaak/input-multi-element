@@ -3,7 +3,7 @@
         var nbMaxElem = e.nbMaxElem;
 
         $(this).html(
-            "<input class='fw-textarea'>"
+            "<textarea class='fw-textarea'></textarea>"
         );
         
         var textarea = $('.fw-textarea', this);
@@ -12,8 +12,9 @@
 
         $(textarea).focusout(function(e) { newElement(); });
 
-        $(textarea).keyup(function(e) {
+        $(textarea).keydown(function(e) {
             if(e.keyCode == 13) {
+                e.preventDefault();
                 newElement(); 
             }
             else if(e.keyCode == 8) {
@@ -75,4 +76,4 @@
             $(textarea).outerWidth($(thisElem).width()-tmpElemsWidth);
         }
     };
-})(jQuery);  
+})(jQuery); 
