@@ -45,7 +45,7 @@
 
         function newElement() {
             if($(textarea).val() != '') {
-                $("<div class='fw-elem'><div><span class='text'>"+$(textarea).val()+"</span><span class='delete'></span></div></div>").insertBefore(textarea);
+                $("<div class='fw-elem'><div><span class='text'>"+$(textarea).val()+"</span><span class='delete'>×</span></div></div>").insertBefore(textarea);
                 $(textarea).val('');
 
                 $('.delete', thisElem).click(function(e) { deleteElement($(this).parent().parent()); });
