@@ -5,7 +5,8 @@
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
-    border: 1px solid #cfcfcf;
+    background-color: white;
+    border-radius: 3px;
 }
     .fw-textarea {
         resize: none;
@@ -22,6 +23,10 @@
     }
     .fw-textarea:focus {
         outline-width: 0;
+        outline: none;
+        border-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
     }
     .fw-elem {        
         margin: 7px 0 0 0;
