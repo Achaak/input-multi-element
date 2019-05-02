@@ -89,4 +89,15 @@
         }
         return elements;
     };
+
+
+    $.fn.addElements = function(element) {
+        var textarea = $('.fw-textarea', this);
+        
+        for (let index = 0; index < element.length; index++) {
+            $("<div class='fw-elem'><div><span class='text'>"+element[index]+"</span><span class='delete'>×</span></div></div>").insertBefore(textarea);
+
+            $('.delete', this).click(function(e) { deleteElement($(this).parent().parent()); });
+        }
+    };
 })(jQuery); 
