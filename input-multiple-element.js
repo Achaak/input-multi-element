@@ -1,12 +1,8 @@
 (function($) {
     $.fn.listElement = function(e) {
-<<<<<<< HEAD
-        var nbMaxElem = (e.nbMaxElem ? e.nbMaxElem : 100000 );
-=======
         if(e) {
             var nbMaxElem = (e.nbMaxElem ? e.nbMaxElem : 100000 );
         }
->>>>>>> d679d78bc0fe35525acb260d86144785dcd06b3a
 
         $(this).html(
             "<textarea class='fw-textarea'></textarea>"
