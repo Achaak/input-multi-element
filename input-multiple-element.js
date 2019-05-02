@@ -76,4 +76,15 @@
             $(textarea).outerWidth($(thisElem).width()-tmpElemsWidth);
         }
     };
+
+
+    $.fn.getElements = function(e) {
+        var target = $(this)
+        var elements = [];
+
+        for (let index = 0; index < target.find(".text").length; index++) {
+            elements.push($(target.find(".text")[index]).html());
+        }
+        return elements;
+    };
 })(jQuery); 
