@@ -1,6 +1,6 @@
 (function($) {
     $.fn.listElement = function(e) {
-        var nbMaxElem = e.nbMaxElem;
+        var nbMaxElem = (e.nbMaxElem ? e.nbMaxElem : 100000 );
 
         $(this).html(
             "<textarea class='fw-textarea'></textarea>"
