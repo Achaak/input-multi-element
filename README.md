@@ -1,6 +1,8 @@
 # input-multi-element
 This is a module to simply add a input with multiple element to your site.
 
+<img src="pictures/input-multiple-element-preview.png" alt="input-multiple-element preview"/>
+
 ## Requirement :
 * JQuery
 
