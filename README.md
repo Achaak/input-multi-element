@@ -30,6 +30,11 @@ $(document).ready(function() {
 });
 ```
 
+## Options :
+```
+maxElement: [number]
+```
+
 ## Fonctions :
 - [inputMultiElement().init](#init)
 - [inputMultiElement().setElement](#setElement)
