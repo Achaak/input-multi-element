@@ -1,44 +1,49 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html>
+    <head>
+        <title>Input multi element demo</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="Input multi element demo">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="input-multiple-element.css">
+        <style type="text/css">
+            * {
+                font-family: "Verdana, Arial, Helvetica, sans-serif";
+            }
+            body {
+                background-color: #a2c5f9;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='ime1'></div>
+        <div id='ime2'></div>
+    </body>
 
-    <title>Input multiple element</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="input-multiple-element.js"></script>
 
-    <!-- CSS -->
-        <link type="text/css" rel="stylesheet" href="input-multiple-element.css">
-    <!-- END CSS -->
-</head>
-<body>
-    <!-- HEADER -->
-        <header></header>
-    <!-- END HEADER -->
-    
-    <!-- SECTION -->
-        <section>
-            <div id='test1' class='fw-input-multiple-element'></div>
-            <div id='test2' class='fw-input-multiple-element'></div>
-        </section>
-    <!-- END SECTION -->
+    <script type="text/javascript">
+        $(document).ready(function() {                
+            InputMultiElement().init(
+                "#ime1",
+                {
+                    maxElement: 50
+                }
+            );
 
-    <!-- FOOTER -->
-        <footer></footer>
-    <!-- END FOOTER -->
-
-    <!-- JAVASCRIPT -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="input-multiple-element.js"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function() {                
-                $("#test1").listElement({
-                    nbMaxElem: 5
-                });            
-                $("#test2").listElement({
-
-                });
+            $("#ime1").on("ime:element:add", function(_e, _elem) {
+                console.log("Element is added", _elem);
             });
-        </script>
-    <!-- END JAVASCRIPT -->
-</body>
+
+            $("#ime1").on("ime:element:delete", function(_e) {
+                console.log("Element is deleted");
+            });
+
+            $("#ime1").on("ime:element:update", function(_e, _elem) {
+                console.log("Element is update", _elem);
+            });
+        });
+    </script>
 </html>
